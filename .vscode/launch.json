@@ -6,7 +6,7 @@
             "type": "gdb",
             "request": "attach",
             "gdbpath": "arm-none-eabi-gdb",
-            "executable": "target/thumbv7em-none-eabihf/debug/stm32f3discovery-led-spinner",
+            "executable": "target/thumbv7em-none-eabihf/debug/blue-pill-rtfm-template",
             "cwd": "${workspaceRoot}",
             "remote": true,
             "target": "localhost:3333",
@@ -28,6 +28,7 @@
 
                 // Load the executable and break at main
                 "load",
+                "tbreak main",
                 "step"
             ]
         }
