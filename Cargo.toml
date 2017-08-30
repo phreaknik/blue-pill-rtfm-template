@@ -1,0 +1,22 @@
+[package]
+authors = ["John Boyd <johnboydiv@gmail.com>"]
+categories = ["embedded", "no-std", "blue-pill"]
+description = "A template for building applications for the Blue Pill dev board in Rust, using the RTFM framework."
+keywords = ["arm", "cortex-m", "template", "blue-pill"]
+license = "MIT OR Apache-2.0"
+name = "blue-pill-rtfm-template"
+repository = "https://github.com/phreaknik/blue-pill-rtfm-template"
+version = "0.1.0"
+
+[profile.release]
+debug = true
+lto = true
+
+[dependencies]
+cortex-m-rtfm = "0.2.0"
+cortex-m-semihosting = "0.2.0"
+blue-pill = { git = "https://github.com/japaric/blue-pill", rev = "2b7d5c56b25f4efad6c7c40042f884cbecb47c0b" }
+
+[dependencies.cortex-m-rt]
+features = ["abort-on-panic"]
+version = "0.3.3"
